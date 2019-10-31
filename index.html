@@ -1,20 +1,82 @@
-<!DOCTYPE HTML>
+<!doctype HTML>
 <html>
+    <head>
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.0/aframe/build/aframe-ar.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
+    </head>
   <body style='margin : 0px; overflow: hidden;'>
-<a-scene embedded arjs = 'sourceType= webcam;'>
+    <a-scene embedded arjs ="trackingMethod:best;">
+            
+        <a-assets>
+            <a-asset-item id ="one-obj" src="/models/one.obj"></a-asset-item>
+             <a-asset-item id ="one-mtl" src="/models/one.mtl"></a-asset-item>
+            <a-asset-item id="heart" src="/assets/scene.gltf"></a-asset-item>
+        </a-assets>
+       <a-marker id="1-marker" type="pattern" url="patterns/pattern-1.patt">
+<a-entity obj-model="obj: #one-obj; mtl: #one-mtl" scale = "2 2 2" position = "-0.5 2 0"></a-entity>
+            <a-entity gltf-model="#heart" rotation="0 -90 45" scale = "2 2 2">
+           </a-entity>
+   </a-marker>
+
+
+             <a-assets>
+            <a-asset-item id ="two-obj" src="/models/two.obj"></a-asset-item>
+             <a-asset-item id ="two-mtl" src="/models/two.mtl"></a-asset-item>
+            <a-asset-item id="heart" src="/assets/scene.gltf"></a-asset-item>
+        </a-assets>
+   <a-marker id="2-marker" type="pattern" url="patterns/pattern-2.patt">
+<a-entity obj-model="obj: #two-obj; mtl: #two-mtl" scale = "1.5 1.5 1.5" position = "-0.8 2 0"></a-entity>
+       <a-entity gltf-model="#heart" rotation="0 -90 45" scale = "2 2 2">
+           </a-entity>
+  </a-marker>
         
-        <a-marker-camera type = 'pattern1' src="pattern-IMG_8557.patt">
-<a-asset-item id= "scene" src="scene.gltf"></a-asset-item>
-  <a-entity gltf-model="#scene" position="0.5 -2 -0.5" scale = "0.001 0.001 0.001" rotation="0,0,-90"></a-entity>
-        </a-marker-camera>
+                <a-assets>
+            <a-asset-item id ="three-obj" src="/models/three.obj"></a-asset-item>
+             <a-asset-item id ="three-mtl" src="/models/three.mtl"></a-asset-item>
+            <a-asset-item id="heart" src="/assets/scene.gltf"></a-asset-item>
+        </a-assets>
+   <a-marker id="3-marker" type="pattern" url="patterns/pattern-3.patt">
+<a-entity obj-model="obj: #three-obj; mtl: #three-mtl" scale = "2 2 2" position = "-0.8 2 0"></a-entity>
+       <a-entity gltf-model="#heart" rotation="0 -90 45" scale = "2 2 2">
+           </a-entity>
+  </a-marker>
+        
+             <a-assets>
+            <a-asset-item id ="four-obj" src="/models/four.obj"></a-asset-item>
+             <a-asset-item id ="four-mtl" src="/models/four.mtl"></a-asset-item>
+          <a-asset-item id="heart" src="/assets/scene.gltf"></a-asset-item>
+        </a-assets>
+   <a-marker id="4-marker" type="pattern" url="patterns/pattern-4.patt">
+<a-entity obj-model="obj: #four-obj; mtl: #four-mtl" scale = "2 2 2" position = "-0.8 2 0"></a-entity>
+       <a-entity gltf-model="#heart" rotation="0 -90 45" scale = "2 2 2">
+           </a-entity>
+  </a-marker>
+        
+              <a-assets>
+            <a-asset-item id ="five-obj" src="/models/five.obj"></a-asset-item>
+             <a-asset-item id ="five-mtl" src="/models/five.mtl"></a-asset-item>
+             <a-asset-item id="heart" src="/assets/scene.gltf"></a-asset-item>
+        </a-assets>
+   <a-marker id="5-marker" type="pattern" url="patterns/pattern-5.patt">
+<a-entity obj-model="obj: #five-obj; mtl: #five-mtl" scale = "2 2 2" position = "-0.8 2 0"></a-entity>
+       <a-entity gltf-model="#heart" rotation="0 -90 45" scale = "2 2 2">
+           </a-entity>
+  </a-marker>
+        
+                    <a-assets>
+            <a-asset-item id ="six-obj" src="/models/six.obj"></a-asset-item>
+             <a-asset-item id ="six-mtl" src="/models/six.mtl"></a-asset-item>
+            <a-asset-item id="heart" src="/assets/scene.gltf"></a-asset-item>
+        </a-assets>
+   <a-marker id="6-marker" type="pattern" url="patterns/pattern-6.patt">
+<a-entity obj-model="obj: #six-obj; mtl: #six-mtl" scale = "0.45 0.45 0.45" position = "-0.8 2 0"></a-entity>
+       <a-entity gltf-model="#heart" rotation="0 -90 45" scale = "2 2 2">
+           </a-entity>
+  </a-marker>
 
             
-        </a-marker> 
- <a-entity camera></a-entity>
+        <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
 
